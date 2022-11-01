@@ -1,0 +1,911 @@
+admin@sonic:~$ show processes cpu
+top - 13:28:01 up  1:38,  2 users,  load average: 0.53, 0.40, 0.49
+Tasks: 247 total,   1 running, 241 sleeping,   0 stopped,   5 zombie
+%Cpu(s):  7.8 us,  6.3 sy,  0.0 ni, 87.1 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :   3903.3 total,    495.2 free,   1977.0 used,   1431.0 buff/cache
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.   1679.6 avail Mem
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+   3242 root      20   0 2359108 499280 142752 S  51.0  53.5  17:12.24 kthreadd
+   6363 root      20   0  126180  35840  13644 S  55.5   0.9   7:27.14 python3
+  56296 admin     20   0   10668   3856   3188 R   6.2   6.1   0:00.02 top
+      1 root      20   0   99864  11160   7908 S   0.0   0.3   0:15.75 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.00 syncd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0H-events_highpri
+      9 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mm_percpu_wq
+     10 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_tasks_rude_
+     11 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_tasks_trace
+     12 root      20   0       0      0      0 S   0.0   0.0   0:00.39 ksoftirqd/0
+     13 root      20   0       0      0      0 I   0.0   0.0   0:08.91 rcu_sched
+     14 root      rt   0       0      0      0 S   0.0   0.0   0:00.04 migration/0
+     15 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/0
+     16 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/1
+     17 root      rt   0       0      0      0 S   0.0   0.0   0:00.15 migration/1
+     18 root      20   0       0      0      0 S   0.0   0.0   0:00.37 ksoftirqd/1
+     20 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/1:0H-events_highpri
+     21 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/2
+     22 root      rt   0       0      0      0 S   0.0   0.0   0:00.14 migration/2
+     23 root      20   0       0      0      0 S   0.0   0.0   0:00.30 ksoftirqd/2
+     24 root      20   0       0      0      0 I   0.0   0.0   0:00.81 kworker/2:0-mm_percpu_wq
+     25 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/2:0H-events_highpri
+     26 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/3
+     27 root      rt   0       0      0      0 S   0.0   0.0   0:00.14 migration/3
+     28 root      20   0       0      0      0 S   0.0   0.0   0:00.24 ksoftirqd/3
+     30 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/3:0H-events_highpri
+     35 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kdevtmpfs
+     36 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 netns
+     37 root      20   0       0      0      0 S   0.0   0.0   0:00.07 kauditd
+     38 root      20   0       0      0      0 S   0.0   0.0   0:00.00 khungtaskd
+     39 root      20   0       0      0      0 S   0.0   0.0   0:00.00 oom_reaper
+     40 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 writeback
+     41 root      20   0       0      0      0 S   0.0   0.0   0:00.29 kcompactd0
+     42 root      25   5       0      0      0 S   0.0   0.0   0:00.00 ksmd
+     43 root      39  19       0      0      0 S   0.0   0.0   0:00.57 khugepaged
+     62 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kintegrityd
+     63 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kblockd
+     64 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 blkcg_punt_bio
+     65 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 edac-poller
+     66 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 devfreq_wq
+     67 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 watchdogd
+     68 root       0 -20       0      0      0 I   0.0   0.0   0:00.14 kworker/0:1H-kblockd
+     70 root      20   0       0      0      0 I   0.0   0.0   0:00.99 kworker/3:1-mm_percpu_wq
+     71 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kswapd0
+     72 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kthrotld
+     73 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/25-aerdrv
+     74 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/26-aerdrv
+     75 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/26-pcie-dpc
+     76 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/27-aerdrv
+     77 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/27-pcie-dpc
+     78 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/28-aerdrv
+     79 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/28-pcie-dpc
+     80 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/29-aerdrv
+     81 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 acpi_thermal_pm
+     82 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 ipv6_addrconf
+     91 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kstrp
+     94 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 zswap-shrink
+     95 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/u9:0
+    118 root       0 -20       0      0      0 I   0.0   0.0   0:00.14 kworker/3:1H-kblockd
+    147 root       0 -20       0      0      0 I   0.0   0.0   0:00.11 kworker/2:1H-kblockd
+    149 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 ata_sff
+    150 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 ixgbe
+    151 root      20   0       0      0      0 S   0.0   0.0   0:00.00 scsi_eh_0
+    152 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 scsi_tmf_0
+    153 root      20   0       0      0      0 S   0.0   0.0   0:00.00 scsi_eh_1
+    154 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 scsi_tmf_1
+    155 root      20   0       0      0      0 S   0.0   0.0   0:00.00 scsi_eh_2
+    156 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 scsi_tmf_2
+    157 root      20   0       0      0      0 S   0.0   0.0   0:00.00 scsi_eh_3
+    158 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 scsi_tmf_3
+    159 root      20   0       0      0      0 S   0.0   0.0   0:00.00 scsi_eh_4
+    160 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 scsi_tmf_4
+    162 root      20   0       0      0      0 I   0.0   0.0   0:00.75 kworker/1:2-mm_percpu_wq
+    180 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 nvme-wq
+    181 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 nvme-reset-wq
+    182 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 nvme-delete-wq
+    204 root       0 -20       0      0      0 I   0.0   0.0   0:00.16 kworker/1:1H-kblockd
+    216 root      20   0       0      0      0 S   0.0   0.0   0:00.25 jbd2/sda3-8
+    217 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 ext4-rsv-conver
+    223 root       0 -20       0      0      0 S   0.0   0.0   0:00.71 loop0
+    251 root       0 -20       0      0      0 S   0.0   0.0   0:00.35 loop1
+    252 root      20   0       0      0      0 S   0.0   0.0   0:00.15 jbd2/loop1-8
+    253 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 ext4-rsv-conver
+    312 root      20   0   40428  11660   8500 S   0.0   0.3   0:01.50 systemd-journal
+    313 root      20   0   21712   5456   4168 S   0.0   0.1   0:00.23 systemd-udevd
+    364 root      20   0    8120   6328   1652 S   0.0   0.2   0:00.55 haveged
+    369 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 qat_device_rese
+    370 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 qat_pf2vf_resp_
+    371 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 adf_vf_stop_wq
+    375 root      16  -4   87048   2692   2324 S   0.0   0.1   0:00.58 auditd
+    379 root      16  -4    6168   3180   2712 S   0.0   0.1   0:00.15 audisp-tacplus
+    452 root      20   0    7312   2848   2592 S   0.0   0.1   0:00.02 cron
+    453 message+  20   0    7804   3776   3436 S   0.0   0.1   0:01.07 dbus-daemon
+    474 root      20   0    8116   4912   3692 S   0.0   0.1   0:00.07 smartd
+    496 root      20   0   13472   6728   5948 S   0.0   0.2   0:00.58 systemd-logind
+    499 root      20   0 1503948  71400  35600 S   0.0   1.8   0:33.90 containerd
+    563 root      20   0   82772   3032   2356 S   0.0   0.1   0:02.86 monit
+    571 root      20   0   13292   7848   6880 S   0.0   0.2   0:00.01 sshd
+    576 root      20   0    6412   1752   1636 S   0.0   0.0   0:00.00 agetty
+    584 root      20   0 1242688 118672  50424 S   0.0   3.0   0:29.17 dockerd
+    607 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 cryptd
+    775 root      20   0  712656  17936   6664 S   0.0   0.4   0:01.93 containerd-shim
+    795 root      20   0   30248  23788   9044 S   0.0   0.6   0:02.54 supervisord
+    914 root      20   0   25612  18924   8540 S   0.0   0.5   0:00.66 python3
+    915 root      20   0  223808   3576   3140 S   0.0   0.1   0:00.01 rsyslogd
+    917 root      20   0  110832  57016   7052 S   0.0   1.4   6:51.67 redis-server
+   1002 root      20   0   11076   4616   3936 S   0.0   0.1   0:00.00 database.sh
+   1006 root      20   0  904888  64496  29856 S   0.0   1.6   0:00.84 docker
+   1040 root      20   0   40372  24520  12868 S   0.0   0.6   0:05.90 procdockerstats
+   1501 root      20   0  290696   5720   3376 S   0.0   0.1   0:00.80 rsyslogd
+   1574 root      20   0  712912  16688   6660 S   0.0   0.4   0:02.04 containerd-shim
+   1645 root      20   0   30392  24068   8992 S   0.0   0.6   0:03.93 supervisord
+   1852 admin     20   0   10944   4136   3684 S   0.0   0.1   0:00.00 bgp.sh
+   1853 admin     20   0   11076   4612   4000 S   0.0   0.1   0:00.00 bgp.sh
+   1854 admin     20   0   43412  29476  12848 S   0.0   0.7   0:00.36 python3
+   2325 root      20   0   49720  34276  13676 S   0.0   0.9   0:07.25 healthd
+   2326 root      20   0   31568  21764   8944 S   0.0   0.5   0:32.89 python3
+   2414 root      20   0  712656  14584   6276 S   0.0   0.4   0:01.98 containerd-shim
+   2434 root      20   0   30700  24160   8908 S   0.0   0.6   0:03.61 supervisord
+   2454 admin     20   0   11076   4580   3960 S   0.0   0.1   0:00.00 pmon.sh
+   2455 admin     20   0   43412  29576  12944 S   0.0   0.7   0:00.35 python3
+   2488 root      20   0   25620  18892   8496 S   0.0   0.5   0:00.65 python3
+   2511 root      20   0  223808   3620   3172 S   0.0   0.1   0:00.08 rsyslogd
+   2515 300       20   0  675684  59716  10976 S   0.0   1.5   0:02.80 zebra
+   2561 root      20   0  712656  16404   6156 S   0.0   0.4   0:02.00 containerd-shim
+   2580 root      20   0   30788  24332   9056 S   0.0   0.6   0:08.28 supervisord
+   2588 root      20   0   25636  19060   8564 S   0.0   0.5   0:00.67 python3
+   2653 300       20   0   43892  12924   5104 S   0.0   0.3   0:00.13 staticd
+   2658 300       20   0  297432  46560  12212 S   0.0   1.2   0:36.37 bgpd
+   2663 root      20   0   11076   4688   3992 S   0.0   0.1   0:00.00 swss.sh
+   2694 root      20   0   37848  25992  12232 S   0.0   0.7   0:01.05 bgpcfgd
+   2695 root      20   0   19968  15620   8232 S   0.0   0.4   0:01.53 bgpmon
+   2698 root      20   0   82184   4564   4240 S   0.0   0.1   0:00.26 fpmsyncd
+   2719 root      20   0  223808   3536   3096 S   0.0   0.1   0:00.02 rsyslogd
+   2787 root      20   0  712656  15140   6724 S   0.0   0.4   0:01.89 containerd-shim
+   2803 root      20   0   25620  18968   8576 S   0.0   0.5   0:00.65 python3
+   2809 root      20   0   30252  24020   9096 S   0.0   0.6   0:03.21 supervisord
+   2836 admin     20   0   11076   4220   3760 S   0.0   0.1   0:00.00 teamd.sh
+   2841 admin     20   0   11076   4264   3808 S   0.0   0.1   0:00.00 teamd.sh
+   2843 root      20   0  712400  16920   6340 S   0.0   0.4   0:02.03 containerd-shim
+   2844 admin     20   0   43412  29416  12780 S   0.0   0.7   0:00.35 python3
+   2863 root      20   0   30252  23808   8888 S   0.0   0.6   0:02.80 supervisord
+   2889 root      20   0   11076   4556   3912 S   0.0   0.1   0:00.00 syncd.sh
+   2893 root      20   0   11076   4696   4080 S   0.0   0.1   0:00.00 syncd.sh
+   2899 root      20   0   43412  29496  12868 S   0.0   0.7   0:00.34 python3
+   2974 root      20   0  712656  16540   6724 S   0.0   0.4   0:01.89 containerd-shim
+   3002 root      20   0   30256  24052   9060 S   0.0   0.6   0:03.36 supervisord
+   3015 root      20   0  112852  27376  12604 S   0.0   0.7   0:07.04 python3
+   3018 root      20   0   37140  25344  12344 S   0.0   0.6   2:05.40 python3
+   3019 root      20   0   37048  25160  12388 S   0.0   0.6   0:01.29 python3
+   3023 admin     20   0   10944   4256   3796 S   0.0   0.1   0:00.00 lldp.sh
+   3024 root      20   0   38068  26240  12480 S   0.0   0.7   0:00.77 python3
+   3025 admin     20   0   11076   4240   3788 S   0.0   0.1   0:00.00 lldp.sh
+   3026 admin     20   0   43412  29472  12828 S   0.0   0.7   0:00.36 python3
+   3027 root      20   0  223808   5544   3092 S   0.0   0.1   0:00.20 rsyslogd
+   3033 root      20   0   25612  18960   8576 S   0.0   0.5   0:00.67 python3
+   3045 root      20   0   25612  18916   8532 S   0.0   0.5   0:00.66 python3
+   3052 root      20   0  712656  17544   6600 S   0.0   0.4   0:01.95 containerd-shim
+   3073 root      20   0   30256  23864   9056 S   0.0   0.6   0:02.53 supervisord
+   3096 admin     20   0   10944   4220   3764 S   0.0   0.1   0:00.00 radv.sh
+   3099 admin     20   0   11076   4640   4028 S   0.0   0.1   0:00.00 radv.sh
+   3102 admin     20   0   43412  29608  12984 S   0.0   0.7   0:00.36 python3
+   3129 root      20   0  256832  27632   9236 S   0.0   0.7   0:00.38 python3
+   3131 root      20   0   81260   5364   4904 S   0.0   0.1   0:00.53 portsyncd
+   3157 root      20   0  223808   5572   3112 S   0.0   0.1   0:00.07 rsyslogd
+   3161 root      20   0  223808   3660   3224 S   0.0   0.1   0:00.01 rsyslogd
+   3179 root      20   0   88440   8284   7208 S   0.0   0.2   0:00.53 teammgrd
+   3180 root      20   0   88080   5588   4952 S   0.0   0.1   0:00.51 tlm_teamd
+   3187 root      20   0   25616  18996   8604 S   0.0   0.5   0:00.66 python3
+   3189 ntp       20   0   74432   3808   3164 S   0.0   0.1   0:00.47 ntpd
+   3195 root      20   0   25612  18896   8508 S   0.0   0.5   0:00.67 python3
+   3197 root      20   0  403860  23204  12576 S   0.0   0.6   0:07.66 orchagent
+   3202 root      20   0   38068  19976   6168 S   0.0   0.5   0:09.99 python3
+   3217 root      20   0   87656   3000   2788 S   0.0   0.1   0:00.02 dsserve
+   3228 root      20   0  223808   3588   3152 S   0.0   0.1   0:00.09 rsyslogd
+   3232 root      20   0   81244   4936   4536 S   0.0   0.1   0:00.47 teamsyncd
+   3245 root      20   0  223808   3648   3208 S   0.0   0.1   0:00.01 rsyslogd
+   3268 root      20   0   88504   8448   7256 S   0.0   0.2   0:00.51 coppmgrd
+   3287 tcpdump   20   0   28364   7748   6644 S   0.0   0.2   0:00.05 lldpd
+   3289 tcpdump   20   0   28620   4000   2680 S   0.0   0.1   0:02.67 lldpd
+   3295 root      20   0       0      0      0 Z   0.0   0.0   0:00.00 sh
+   3363 root      20   0  105256  21620  11768 S   0.0   0.5   0:05.00 python3
+   3447 root      20   0    3964   2928   2632 S   0.0   0.1   0:00.18 arp_update
+   3448 root      20   0   81256   4464   4132 S   0.0   0.1   0:00.87 neighsyncd
+   3450 root      20   0   88304   8176   7100 S   0.0   0.2   0:00.47 fdbmgrd
+   3452 root      20   0   88444   8424   7328 S   0.0   0.2   0:00.49 vlanmgrd
+   3454 root      20   0   88588   8628   7428 S   0.0   0.2   0:00.65 intfmgrd
+   3455 root      20   0   88408   8440   7288 S   0.0   0.2   0:00.59 portmgrd
+   3456 root      20   0   88632   8260   7188 S   0.0   0.2   0:00.52 buffermgrd
+   3462 root      20   0   88440   8308   7172 S   0.0   0.2   0:00.50 vrfmgrd
+   3465 root      20   0   88336   8208   7140 S   0.0   0.2   0:00.49 nbrmgrd
+   3466 root      20   0   88464   8316   7244 S   0.0   0.2   0:00.48 vxlanmgrd
+   3469 root      20   0   81168   4904   4516 S   0.0   0.1   0:00.51 fdbsyncd
+   3484 root      20   0   88412   8248   7172 S   0.0   0.2   0:00.49 tunnelmgrd
+   3554 root      20   0   24732  15880   9404 S   0.0   0.4   0:00.91 python3
+   3649 root      20   0       0      0      0 Z   0.0   0.0   0:00.00 python3
+   4192 root      20   0    5668   1640   1496 S   0.0   0.0   0:00.31 ndppd
+   5168 root      20   0   47364  31800  13604 S   0.0   0.8   0:01.05 hostcfgd
+   6083 root      20   0  712400  16900   6728 S   0.0   0.4   0:04.21 containerd-shim
+   6106 root      20   0  712656  16592   6404 S   0.0   0.4   0:02.58 containerd-shim
+   6129 root      20   0   29116  22900   9084 S   0.0   0.6   0:02.73 supervisord
+   6137 root      20   0   30256  23864   8940 S   0.0   0.6   0:02.86 supervisord
+   6159 admin     20   0   11076   4128   3676 S   0.0   0.1   0:00.00 mgmt-framework.
+   6160 admin     20   0   43412  29524  12896 S   0.0   0.7   0:00.35 python3
+   6167 admin     20   0   11076   4264   3804 S   0.0   0.1   0:00.00 telemetry.sh
+   6168 admin     20   0   43412  29596  12972 S   0.0   0.7   0:00.35 python3
+   6211 root      20   0  712400  16872   6476 S   0.0   0.4   0:01.71 containerd-shim
+   6230 root      20   0   33644  24204   9284 S   0.0   0.6   0:02.87 supervisord
+   6245 root      20   0   25612  18972   8588 S   0.0   0.5   0:00.63 python3
+   6246 root      20   0   11156   4536   4032 S   0.0   0.1   0:00.00 snmp.sh
+   6249 root      20   0   43496  29492  12840 S   0.0   0.7   0:00.35 python3
+   6266 root      20   0  223808   7804   3264 S   0.0   0.2   0:00.02 rsyslogd
+   6270 root      20   0  223808   3536   3096 S   0.0   0.1   0:00.29 rsyslogd
+   6274 root      20   0 1543932 223312  26232 S   0.0   5.6   0:33.02 rest_server
+   6277 root      20   0   31100  19200   8776 S   0.0   0.5   0:00.65 python3
+   6313 root      20   0  223808   5584   3128 S   0.0   0.1   0:00.02 rsyslogd
+   6317 tcpdump   20   0   31036  12708   9124 S   0.0   0.3   0:15.95 snmpd
+   6320 root      20   0 1397460  75544  18716 S   0.0   1.9   0:36.25 telemetry
+   6347 root      20   0 1468188  75172  17148 S   0.0   1.9   0:36.33 dialout_client_
+  21629 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker/1:1-events
+  21850 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker/3:0-mm_percpu_wq
+  22470 root      20   0       0      0      0 I   0.0   0.0   0:00.13 kworker/u8:1-events_unbound
+  22516 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker/0:1-events
+  23467 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker/2:1-events
+  23475 root      20   0    6044   2164   2048 S   0.0   0.1   0:00.00 agetty
+  23569 root      20   0  115300  26384  13492 S   0.0   0.7   0:01.27 caclmgrd
+  47349 root      20   0   13740   8336   7184 S   0.0   0.2   0:00.14 sshd
+  47371 admin     20   0   13740   4800   3644 S   0.0   0.1   0:00.01 sshd
+  47372 admin     20   0   12096   6104   4460 S   0.0   0.2   0:00.05 bash
+  47377 root      20   0   10616   4836   4288 S   0.0   0.1   0:00.00 sudo
+  47378 root      20   0   12176   6148   4488 S   0.0   0.2   0:00.03 bash
+  52309 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker/u8:0-events_unbound
+  52670 root      20   0       0      0      0 I   0.0   0.0   0:00.15 kworker/0:2-events_power_efficient
+  55025 root      20   0    2524    744    684 S   0.0   0.0   0:00.00 sleep
+  55593 root      20   0   13744   8252   7096 S   0.0   0.2   0:00.10 sshd
+  55597 root      20   0       0      0      0 Z   0.0   0.0   0:00.00 sh
+  55641 admin     20   0   14080   5916   4672 S   0.0   0.1   0:00.01 sshd
+  55642 root      20   0   13748   8220   7068 S   0.0   0.2   0:00.11 sshd
+  55648 admin     20   0   13748   4752   3596 S   0.0   0.1   0:00.00 sshd
+  55649 admin     20   0    5816   4240   3772 S   0.0   0.1   0:00.00 sftp-server
+  55650 admin     20   0   12208   6208   4528 S   0.0   0.2   0:00.07 bash
+  56076 root      20   0       0      0      0 Z   0.0   0.0   0:00.45 python3
+  56077 root      20   0       0      0      0 Z   0.0   0.0   0:00.08 python3
+  56274 admin     20   0   58652  39884  14464 S   0.0   1.0   0:00.53 show
+  56295 admin     20   0    2420    516    452 S   0.0   0.0   0:00.00 sh
+admin@sonic:~$
+
+
+admin@sonic:~$ show version
+
+SONiC Software Version: SONiC.202111-CLS.11-254d92632
+Distribution: Debian 11.4
+Kernel: 5.10.0-8-2-amd64
+Build commit: 254d92632
+Build date: Thu Jul 28 10:38:34 UTC 2022
+Built by: dharmj@cthgd047
+
+Platform: x86_64-cel_belgite-r0
+HwSKU: CELESTICA-BELGITE
+ASIC: broadcom
+ASIC Count: 1
+Serial Number: E1070F2B042519GD200078
+Model Number: R3059-F9010-01
+Hardware Revision:
+Uptime: 15:28:39 up  1:39,  2 users,  load average: 0.44, 0.38, 0.48
+
+Docker images:
+REPOSITORY                    TAG                       IMAGE ID       SIZE
+docker-sonic-mgmt-framework   202111-CLS.11-254d92632   2761e8c0bf68   622MB
+docker-sonic-mgmt-framework   latest                    2761e8c0bf68   622MB
+docker-sonic-telemetry        202111-CLS.11-254d92632   f388bea7c4f3   516MB
+docker-sonic-telemetry        latest                    f388bea7c4f3   516MB
+docker-dhcp-relay             latest                    23b6cd023a43   438MB
+docker-syncd-brcm             202111-CLS.11-254d92632   b3b4c6cf2aed   787MB
+docker-syncd-brcm             latest                    b3b4c6cf2aed   787MB
+docker-platform-monitor       202111-CLS.11-254d92632   de1d0f9e2741   689MB
+docker-platform-monitor       latest                    de1d0f9e2741   689MB
+docker-teamd                  202111-CLS.11-254d92632   818a954460f2   439MB
+docker-teamd                  latest                    818a954460f2   439MB
+docker-snmp                   202111-CLS.11-254d92632   7697d0448cb5   468MB
+docker-snmp                   latest                    7697d0448cb5   468MB
+docker-sflow                  202111-CLS.11-254d92632   e5155bfac7cc   440MB
+docker-sflow                  latest                    e5155bfac7cc   440MB
+docker-orchagent              202111-CLS.11-254d92632   aea1884e2052   457MB
+docker-orchagent              latest                    aea1884e2052   457MB
+docker-router-advertiser      202111-CLS.11-254d92632   4b9fa2b12fe8   425MB
+docker-router-advertiser      latest                    4b9fa2b12fe8   425MB
+docker-nat                    202111-CLS.11-254d92632   f75517b6816c   442MB
+docker-nat                    latest                    f75517b6816c   442MB
+docker-mux                    202111-CLS.11-254d92632   c15def30f717   477MB
+docker-mux                    latest                    c15def30f717   477MB
+docker-macsec                 202111-CLS.11-254d92632   0730a46f7cea   442MB
+docker-macsec                 latest                    0730a46f7cea   442MB
+docker-lldp                   202111-CLS.11-254d92632   90d3de0fa156   465MB
+docker-lldp                   latest                    90d3de0fa156   465MB
+docker-iccpd                  202111-CLS.11-254d92632   f440d2c82fc2   439MB
+docker-iccpd                  latest                    f440d2c82fc2   439MB
+docker-gbsyncd-credo          202111-CLS.11-254d92632   ae3861f0bf8a   479MB
+docker-gbsyncd-credo          latest                    ae3861f0bf8a   479MB
+docker-fpm-frr                202111-CLS.11-254d92632   c62cb2eccba3   457MB
+docker-fpm-frr                latest                    c62cb2eccba3   457MB
+docker-database               202111-CLS.11-254d92632   9cc967bcc311   425MB
+docker-database               latest                    9cc967bcc311   425MB
+
+admin@sonic:~$
+
+
+
+admin@sonic:~$ show platform temperature
+    Sensor    Temperature    High TH    Low TH    Crit High TH    Crit Low TH    Warning          Timestamp
+----------  -------------  ---------  --------  --------------  -------------  ---------  -----------------
+   LM75_U4           24.5       80.0       N/A             100          0.001      True  20220908 13:28:11
+   LM75_U7           25.5       80.0       N/A             100          0.001      False  20220908 13:28:11
+  LM75_U10           31.5       80.0       N/A             100          0.001      True  20220908 13:28:11
+  LM75_U60           32.5       78.0       N/A             100          0.001      True  20220908 13:28:11
+PSU1_TEMP1           34          N/A       N/A             100          0.001      False  20220908 13:28:11
+PSU2_TEMP1           25          N/A       N/A             100          0.001      True  20220908 13:28:11
+admin@sonic:~$
+
+
+admin@sonic:~$ show system-memory
+               total        used        free      shared  buff/cache   available
+Mem:            3903        1978         491          22        1433        1678
+Swap:              0           0           0
+admin@sonic:~$
+
+
+admin@sonic:~$ show processes memory
+top - 13:34:01 up  1:44,  2 users,  load average: 1.13, 0.62, 0.53
+Tasks: 249 total,   2 running, 242 sleeping,   0 stopped,   5 zombie
+%Cpu(s): 28.6 us,  4.3 sy,  0.0 ni, 67.1 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :   3903.3 total,    451.6 free,   2018.2 used,   1433.4 buff/cache
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.   1638.8 avail Mem
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+   3242 root      20   0 2359108 499280 142752 S   0.0  12.5  18:15.55 syncd
+   6274 root      20   0 1543932 223312  26232 S   0.0   5.6   0:34.74 rest_server
+    584 root      20   0 1242688 118672  50424 S   0.0   3.0   0:31.24 dockerd
+   6320 root      20   0 1397460  75544  18716 S   0.0   1.9   0:38.56 telemetry
+   6347 root      20   0 1468188  75172  17148 S   0.0   1.9   0:38.62 dialout_client_
+    499 root      20   0 1503948  71340  35600 S   0.0   1.8   0:35.99 containerd
+   1006 root      20   0  904888  64496  29856 S   0.0   1.6   0:00.90 docker
+   2515 300       20   0  675684  59716  10976 S   0.0   1.5   0:02.90 zebra
+  59457 root      20   0  829748  58888  31252 S   0.0   1.5   0:00.06 docker
+    917 root      20   0  110832  56804   7052 S   6.2   1.4   7:17.67 redis-server
+   2658 300       20   0  297432  46560  12212 S   0.0   1.2   0:38.47 bgpd
+  59427 admin     20   0   58644  39936  14516 S   0.0   1.0   0:00.54 show
+   6363 root      20   0  126312  36100  13644 S   6.2   0.9   7:55.91 python3
+   2325 root      20   0   49720  34284  13676 S   0.0   0.9   0:07.68 healthd
+   5168 root      20   0   47364  31800  13604 S   0.0   0.8   0:01.08 hostcfgd
+   3102 admin     20   0   43412  29608  12984 S   0.0   0.7   0:00.36 python3
+   6168 admin     20   0   43412  29596  12972 S   0.0   0.7   0:00.35 python3
+   2455 admin     20   0   43412  29576  12944 S   0.0   0.7   0:00.35 python3
+   6160 admin     20   0   43412  29524  12896 S   0.0   0.7   0:00.35 python3
+   2899 root      20   0   43412  29496  12868 S   0.0   0.7   0:00.34 python3
+   6249 root      20   0   43496  29492  12840 S   0.0   0.7   0:00.35 python3
+   1854 admin     20   0   43412  29476  12848 S   0.0   0.7   0:00.36 python3
+   3026 admin     20   0   43412  29472  12828 S   0.0   0.7   0:00.36 python3
+   2844 admin     20   0   43412  29416  12780 S   0.0   0.7   0:00.35 python3
+   3129 root      20   0  256832  27632   9236 S   0.0   0.7   0:00.38 python3
+   3015 root      20   0  112852  27376  12604 S   0.0   0.7   0:07.39 python3
+  23569 root      20   0  115300  26384  13492 S   0.0   0.7   0:01.30 caclmgrd
+   3024 root      20   0   38068  26240  12480 S   0.0   0.7   0:00.77 python3
+   2694 root      20   0   37848  25992  12232 S   0.0   0.7   0:01.08 bgpcfgd
+   3018 root      20   0   37140  25344  12344 S   0.0   0.6   2:13.02 python3
+   3019 root      20   0   37048  25160  12388 S   0.0   0.6   0:01.29 python3
+   1040 root      20   0   40372  24520  12868 S   0.0   0.6   0:06.23 procdockerstats
+   2580 root      20   0   30788  24332   9056 S   0.0   0.6   0:08.60 supervisord
+   6230 root      20   0   33644  24204   9284 S   0.0   0.6   0:03.03 supervisord
+   2434 root      20   0   30700  24160   8908 S   0.0   0.6   0:03.77 supervisord
+   1645 root      20   0   30392  24068   8992 S   0.0   0.6   0:04.12 supervisord
+   3002 root      20   0   30256  24052   9060 S   0.0   0.6   0:03.53 supervisord
+   2809 root      20   0   30252  24028   9096 S   0.0   0.6   0:03.37 supervisord
+   3073 root      20   0   30256  23864   9056 S   0.0   0.6   0:02.67 supervisord
+   6137 root      20   0   30256  23864   8940 S   0.0   0.6   0:03.01 supervisord
+   2863 root      20   0   30252  23808   8888 S   0.0   0.6   0:02.95 supervisord
+    795 root      20   0   30248  23788   9044 S   0.0   0.6   0:02.68 supervisord
+   3197 root      20   0  403860  23204  12576 S   0.0   0.6   0:08.06 orchagent
+   6129 root      20   0   29116  22900   9084 S   0.0   0.6   0:02.85 supervisord
+  59484 root      20   0   28736  22008   8712 R 100.0   0.6   0:00.27 supervisorctl
+   2326 root      20   0   31568  21764   8944 S   0.0   0.5   0:34.84 python3
+   3363 root      20   0  105256  21620  11768 S   0.0   0.5   0:05.30 python3
+   3202 root      20   0   38068  19976   6168 S   0.0   0.5   0:10.64 python3
+   6277 root      20   0   31100  19200   8776 S   0.0   0.5   0:00.68 python3
+   2588 root      20   0   25636  19060   8564 S   0.0   0.5   0:00.71 python3
+   3187 root      20   0   25616  18996   8604 S   0.0   0.5   0:00.69 python3
+   6245 root      20   0   25612  18972   8588 S   0.0   0.5   0:00.66 python3
+   2803 root      20   0   25620  18968   8576 S   0.0   0.5   0:00.68 python3
+   3033 root      20   0   25612  18960   8576 S   0.0   0.5   0:00.70 python3
+    914 root      20   0   25612  18924   8540 S   0.0   0.5   0:00.69 python3
+   3045 root      20   0   25612  18916   8532 S   0.0   0.5   0:00.69 python3
+   3195 root      20   0   25612  18896   8508 S   0.0   0.5   0:00.69 python3
+   2488 root      20   0   25620  18892   8496 S   0.0   0.5   0:00.68 python3
+    775 root      20   0  712656  17968   6664 S   0.0   0.4   0:02.04 containerd-shim
+   3052 root      20   0  712656  17496   6600 S   0.0   0.4   0:02.08 containerd-shim
+   6211 root      20   0  712400  17052   6476 S   0.0   0.4   0:01.82 containerd-shim
+   2843 root      20   0  712400  16960   6340 S   0.0   0.4   0:02.16 containerd-shim
+   6083 root      20   0  712400  16900   6728 S   0.0   0.4   0:04.37 containerd-shim
+   1574 root      20   0  712912  16800   6660 S   0.0   0.4   0:02.15 containerd-shim
+   2974 root      20   0  712656  16788   6724 S   0.0   0.4   0:02.02 containerd-shim
+   6106 root      20   0  712656  16688   6404 S   0.0   0.4   0:02.79 containerd-shim
+   2561 root      20   0  712656  16448   6156 S   0.0   0.4   0:02.12 containerd-shim
+   3554 root      20   0   24732  15880   9404 S   0.0   0.4   0:00.92 python3
+   2695 root      20   0   19968  15620   8232 S   0.0   0.4   0:01.62 bgpmon
+   2787 root      20   0  712656  15280   6724 S   0.0   0.4   0:02.00 containerd-shim
+   2414 root      20   0  712656  14476   6276 S   0.0   0.4   0:02.10 containerd-shim
+   2653 300       20   0   43892  12924   5104 S   0.0   0.3   0:00.14 staticd
+   6317 tcpdump   20   0   31036  12708   9124 S   0.0   0.3   0:16.92 snmpd
+    312 root      20   0   40428  11660   8500 S   0.0   0.3   0:01.52 systemd-journal
+      1 root      20   0   99864  11160   7908 S   0.0   0.3   0:16.05 systemd
+   3454 root      20   0   88588   8628   7428 S   0.0   0.2   0:00.67 intfmgrd
+   3268 root      20   0   88504   8448   7256 S   0.0   0.2   0:00.54 coppmgrd
+   3455 root      20   0   88408   8440   7288 S   0.0   0.2   0:00.61 portmgrd
+   3452 root      20   0   88444   8424   7328 S   0.0   0.2   0:00.53 vlanmgrd
+   3466 root      20   0   88464   8316   7244 S   0.0   0.2   0:00.51 vxlanmgrd
+   3462 root      20   0   88440   8308   7172 S   0.0   0.2   0:00.53 vrfmgrd
+   3179 root      20   0   88440   8284   7208 S   0.0   0.2   0:00.55 teammgrd
+   3456 root      20   0   88632   8260   7188 S   0.0   0.2   0:00.55 buffermgrd
+  55593 root      20   0   13744   8252   7096 S   0.0   0.2   0:00.10 sshd
+   3484 root      20   0   88412   8248   7172 S   0.0   0.2   0:00.52 tunnelmgrd
+  55642 root      20   0   13748   8220   7068 S   0.0   0.2   0:00.11 sshd
+   3465 root      20   0   88336   8208   7140 S   0.0   0.2   0:00.52 nbrmgrd
+   3450 root      20   0   88304   8176   7100 S   0.0   0.2   0:00.50 fdbmgrd
+  57193 root      20   0   13740   8084   6932 S   0.0   0.2   0:00.12 sshd
+    571 root      20   0   13292   7848   6880 S   0.0   0.2   0:00.01 sshd
+   6266 root      20   0  223808   7804   3264 S   0.0   0.2   0:00.02 rsyslogd
+   3287 tcpdump   20   0   28364   7748   6644 S   0.0   0.2   0:00.05 lldpd
+    496 root      20   0   13472   6728   5948 S   0.0   0.2   0:00.58 systemd-logind
+    364 root      20   0    8120   6328   1652 S   0.0   0.2   0:00.56 haveged
+  55650 admin     20   0   12208   6208   4528 S   0.0   0.2   0:00.08 bash
+  57438 admin     20   0   12096   6156   4492 S   0.0   0.2   0:00.04 bash
+  55641 admin     20   0   14080   5944   4672 S   0.0   0.1   0:00.02 sshd
+   1501 root      20   0  290696   5720   3376 S   0.0   0.1   0:00.80 rsyslogd
+   3180 root      20   0   88080   5588   4952 S   0.0   0.1   0:00.54 tlm_teamd
+   6313 root      20   0  223808   5584   3128 S   0.0   0.1   0:00.02 rsyslogd
+   3157 root      20   0  223808   5572   3112 S   0.0   0.1   0:00.07 rsyslogd
+   3027 root      20   0  223808   5544   3092 S   0.0   0.1   0:00.20 rsyslogd
+    313 root      20   0   21712   5456   4168 S   0.0   0.1   0:00.23 systemd-udevd
+   3131 root      20   0   81260   5364   4904 S   0.0   0.1   0:00.55 portsyncd
+   3232 root      20   0   81244   4936   4536 S   0.0   0.1   0:00.50 teamsyncd
+    474 root      20   0    8116   4912   3692 S   0.0   0.1   0:00.07 smartd
+   3469 root      20   0   81168   4904   4516 S   0.0   0.1   0:00.54 fdbsyncd
+  55648 admin     20   0   13748   4752   3596 S   0.0   0.1   0:00.00 sshd
+  57432 admin     20   0   13740   4744   3588 S   0.0   0.1   0:00.00 sshd
+   2893 root      20   0   11076   4696   4080 S   0.0   0.1   0:00.00 syncd.sh
+   2663 root      20   0   11076   4688   3992 S   0.0   0.1   0:00.00 swss.sh
+   3099 admin     20   0   11076   4640   4028 S   0.0   0.1   0:00.00 radv.sh
+   1002 root      20   0   11076   4616   3936 S   0.0   0.1   0:00.00 database.sh
+   1853 admin     20   0   11076   4612   4000 S   0.0   0.1   0:00.00 bgp.sh
+   2454 admin     20   0   11076   4580   3960 S   0.0   0.1   0:00.00 pmon.sh
+   2698 root      20   0   82184   4564   4240 S   0.0   0.1   0:00.27 fpmsyncd
+   2889 root      20   0   11076   4556   3912 S   0.0   0.1   0:00.00 syncd.sh
+   6246 root      20   0   11156   4536   4032 S   0.0   0.1   0:00.00 snmp.sh
+   3448 root      20   0   81256   4464   4132 S   0.0   0.1   0:00.93 neighsyncd
+   2841 admin     20   0   11076   4264   3808 S   0.0   0.1   0:00.00 teamd.sh
+   6167 admin     20   0   11076   4264   3804 S   0.0   0.1   0:00.00 telemetry.sh
+   3023 admin     20   0   10944   4256   3796 S   0.0   0.1   0:00.00 lldp.sh
+   3025 admin     20   0   11076   4240   3788 S   0.0   0.1   0:00.00 lldp.sh
+  55649 admin     20   0    5816   4240   3772 S   0.0   0.1   0:00.00 sftp-server
+   2836 admin     20   0   11076   4220   3760 S   0.0   0.1   0:00.00 teamd.sh
+   3096 admin     20   0   10944   4220   3764 S   0.0   0.1   0:00.00 radv.sh
+   1852 admin     20   0   10944   4136   3684 S   0.0   0.1   0:00.00 bgp.sh
+   6159 admin     20   0   11076   4128   3676 S   0.0   0.1   0:00.00 mgmt-framework.
+   3289 tcpdump   20   0   28620   4000   2680 S   0.0   0.1   0:02.83 lldpd
+   3189 ntp       20   0   74432   3808   3164 S   0.0   0.1   0:00.50 ntpd
+  59501 admin     20   0   10668   3788   3124 R   0.0   0.1   0:00.01 top
+    453 message+  20   0    7804   3776   3436 S   0.0   0.1   0:01.08 dbus-daemon
+   3161 root      20   0  223808   3660   3224 S   0.0   0.1   0:00.01 rsyslogd
+   3245 root      20   0  223808   3648   3208 S   0.0   0.1   0:00.01 rsyslogd
+   2511 root      20   0  223808   3620   3172 S   0.0   0.1   0:00.08 rsyslogd
+   3228 root      20   0  223808   3588   3152 S   0.0   0.1   0:00.09 rsyslogd
+    915 root      20   0  223808   3576   3140 S   0.0   0.1   0:00.01 rsyslogd
+   2719 root      20   0  223808   3536   3096 S   0.0   0.1   0:00.02 rsyslogd
+   6270 root      20   0  223808   3536   3096 S   0.0   0.1   0:00.29 rsyslogd
+    379 root      16  -4    6168   3180   2712 S   0.0   0.1   0:00.15 audisp-tacplus
+    563 root      20   0   82772   3032   2356 S   0.0   0.1   0:03.06 monit
+   3217 root      20   0   87656   3000   2788 S   0.0   0.1   0:00.02 dsserve
+   3447 root      20   0    3964   2928   2632 S   0.0   0.1   0:00.19 arp_update
+    452 root      20   0    7312   2848   2592 S   0.0   0.1   0:00.03 cron
+    375 root      16  -4   87048   2692   2324 S   0.0   0.1   0:00.58 auditd
+  23475 root      20   0    6044   2164   2048 S   0.0   0.1   0:00.00 agetty
+    576 root      20   0    6412   1752   1636 S   0.0   0.0   0:00.00 agetty
+   4192 root      20   0    5668   1640   1496 S   0.0   0.0   0:00.33 ndppd
+  58048 root      20   0    2524    748    680 S   0.0   0.0   0:00.00 sleep
+  59456 root      20   0    2420    520    456 S   0.0   0.0   0:00.00 sh
+  59500 admin     20   0    2420    520    456 S   0.0   0.0   0:00.00 sh
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0H-events_highpri
+      9 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mm_percpu_wq
+     10 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_tasks_rude_
+     11 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_tasks_trace
+     12 root      20   0       0      0      0 S   0.0   0.0   0:00.41 ksoftirqd/0
+     13 root      20   0       0      0      0 I   0.0   0.0   0:09.44 rcu_sched
+     14 root      rt   0       0      0      0 S   0.0   0.0   0:00.04 migration/0
+     15 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/0
+     16 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/1
+     17 root      rt   0       0      0      0 S   0.0   0.0   0:00.15 migration/1
+     18 root      20   0       0      0      0 S   0.0   0.0   0:00.39 ksoftirqd/1
+     20 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/1:0H-events_highpri
+     21 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/2
+     22 root      rt   0       0      0      0 S   0.0   0.0   0:00.14 migration/2
+     23 root      20   0       0      0      0 S   0.0   0.0   0:00.31 ksoftirqd/2
+     24 root      20   0       0      0      0 I   0.0   0.0   0:00.86 kworker/2:0-events
+     25 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/2:0H-events_highpri
+     26 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/3
+     27 root      rt   0       0      0      0 S   0.0   0.0   0:00.14 migration/3
+     28 root      20   0       0      0      0 S   0.0   0.0   0:00.25 ksoftirqd/3
+     30 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/3:0H-events_highpri
+     35 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kdevtmpfs
+     36 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 netns
+     37 root      20   0       0      0      0 S   0.0   0.0   0:00.07 kauditd
+     38 root      20   0       0      0      0 S   0.0   0.0   0:00.00 khungtaskd
+     39 root      20   0       0      0      0 S   0.0   0.0   0:00.00 oom_reaper
+     40 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 writeback
+     41 root      20   0       0      0      0 S   0.0   0.0   0:00.30 kcompactd0
+     42 root      25   5       0      0      0 S   0.0   0.0   0:00.00 ksmd
+     43 root      39  19       0      0      0 S   0.0   0.0   0:00.58 khugepaged
+     62 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kintegrityd
+     63 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kblockd
+     64 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 blkcg_punt_bio
+     65 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 edac-poller
+     66 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 devfreq_wq
+     67 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 watchdogd
+     68 root       0 -20       0      0      0 I   0.0   0.0   0:00.15 kworker/0:1H-kblockd
+     70 root      20   0       0      0      0 I   0.0   0.0   0:01.06 kworker/3:1-events
+     71 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kswapd0
+     72 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kthrotld
+     73 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/25-aerdrv
+     74 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/26-aerdrv
+     75 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/26-pcie-dpc
+     76 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/27-aerdrv
+     77 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/27-pcie-dpc
+     78 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/28-aerdrv
+     79 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/28-pcie-dpc
+     80 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/29-aerdrv
+     81 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 acpi_thermal_pm
+     82 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 ipv6_addrconf
+     91 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kstrp
+     94 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 zswap-shrink
+     95 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/u9:0
+    118 root       0 -20       0      0      0 I   0.0   0.0   0:00.15 kworker/3:1H-kblockd
+    147 root       0 -20       0      0      0 I   0.0   0.0   0:00.12 kworker/2:1H-kblockd
+    149 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 ata_sff
+    150 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 ixgbe
+    151 root      20   0       0      0      0 S   0.0   0.0   0:00.00 scsi_eh_0
+    152 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 scsi_tmf_0
+    153 root      20   0       0      0      0 S   0.0   0.0   0:00.00 scsi_eh_1
+    154 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 scsi_tmf_1
+    155 root      20   0       0      0      0 S   0.0   0.0   0:00.00 scsi_eh_2
+    156 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 scsi_tmf_2
+    157 root      20   0       0      0      0 S   0.0   0.0   0:00.00 scsi_eh_3
+    158 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 scsi_tmf_3
+    159 root      20   0       0      0      0 S   0.0   0.0   0:00.00 scsi_eh_4
+    160 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 scsi_tmf_4
+    162 root      20   0       0      0      0 I   0.0   0.0   0:00.80 kworker/1:2-events
+    180 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 nvme-wq
+    181 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 nvme-reset-wq
+    182 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 nvme-delete-wq
+    204 root       0 -20       0      0      0 I   0.0   0.0   0:00.16 kworker/1:1H-kblockd
+    216 root      20   0       0      0      0 S   0.0   0.0   0:00.27 jbd2/sda3-8
+    217 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 ext4-rsv-conver
+    223 root       0 -20       0      0      0 S   0.0   0.0   0:00.72 loop0
+    251 root       0 -20       0      0      0 S   0.0   0.0   0:00.37 loop1
+    252 root      20   0       0      0      0 S   0.0   0.0   0:00.16 jbd2/loop1-8
+    253 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 ext4-rsv-conver
+    369 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 qat_device_rese
+    370 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 qat_pf2vf_resp_
+    371 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 adf_vf_stop_wq
+    607 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 cryptd
+   3295 root      20   0       0      0      0 Z   0.0   0.0   0:00.00 sh
+   3649 root      20   0       0      0      0 Z   0.0   0.0   0:00.00 python3
+  21629 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker/1:1-events
+  21850 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker/3:0-mm_percpu_wq
+  22516 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker/0:1-events
+  23467 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker/2:1-events
+  52309 root      20   0       0      0      0 I   0.0   0.0   0:00.01 kworker/u8:0-events_unbound
+  52670 root      20   0       0      0      0 I   0.0   0.0   0:00.21 kworker/0:2-events
+  56297 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker/u8:2-ext4-rsv-conversion
+  58069 root      20   0       0      0      0 I   0.0   0.0   0:00.05 kworker/0:0-events_power_efficient
+  59117 root      20   0       0      0      0 Z   0.0   0.0   0:00.00 sh
+  59235 root      20   0       0      0      0 Z   0.0   0.0   0:00.45 python3
+  59236 root      20   0       0      0      0 Z   0.0   0.0   0:00.08 python3
+
+
+admin@sonic:~$ show interface counters
+     IFACE    STATE    RX_OK     RX_BPS    RX_UTIL    RX_ERR    RX_DRP    RX_OVR    TX_OK     TX_BPS    TX_UTIL    TX_ERR    TX_DRP    TX_OVR
+----------  -------  -------  ---------  ---------  --------  --------  --------  -------  ---------  ---------  --------  --------  --------
+ Ethernet0        U    3,165  32.87 B/s      0.00%         0         4         0    3,166  29.51 B/s      0.00%         0         0         0
+ Ethernet1        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+ Ethernet2        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+ Ethernet3        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+ Ethernet4        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+ Ethernet5        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+ Ethernet6        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+ Ethernet7        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+ Ethernet8        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+ Ethernet9        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet10        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet11        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet12        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet13        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet14        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet15        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet16        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet17        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet18        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet19        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet20        U    3,165  29.51 B/s      0.00%         0         3         0    3,165  32.87 B/s      0.00%         0         0         0
+Ethernet21        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet22        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet23        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet24        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet25        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet26        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet27        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet28        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet29        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet30        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet31        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet32        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet33        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet34        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet35        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet36        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet37        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet38        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet39        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet40        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet41        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet42        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet43        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet44        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet45        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet46        U   28,027   0.00 B/s      0.00%         0    14,000         0    3,194  46.01 B/s      0.00%         0         0         0
+Ethernet47        U       22   0.00 B/s      0.00%         0         0         0   14,385   0.21 B/s      0.00%         0         0         0
+Ethernet48        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet49        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet50        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet51        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet52        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet53        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet54        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+Ethernet55        D        0   0.00 B/s      0.00%         0         0         0        0   0.00 B/s      0.00%         0         0         0
+admin@sonic:~$
+
+admin@sonic:~$ date
+Thu 08 Sep 2022 01:45:26 PM UTC
+admin@sonic:~$
+
+admin@sonic:~$ show processes summary
+    PID    PPID CMD                         %MEM %CPU
+      1       0 /sbin/init                   0.2  0.2
+      2       0 [kthreadd]                   0.0  0.0
+      3       2 [rcu_gp]                     0.0  0.0
+      4       2 [rcu_par_gp]                 0.0  0.0
+      6       2 [kworker/0:0H-events_highpr  0.0  0.0
+      9       2 [mm_percpu_wq]               0.0  0.0
+     10       2 [rcu_tasks_rude_]            0.0  0.0
+     11       2 [rcu_tasks_trace]            0.0  0.0
+     12       2 [ksoftirqd/0]                0.0  0.0
+     13       2 [rcu_sched]                  0.0  0.1
+     14       2 [migration/0]                0.0  0.0
+     15       2 [cpuhp/0]                    0.0  0.0
+     16       2 [cpuhp/1]                    0.0  0.0
+     17       2 [migration/1]                0.0  0.0
+     18       2 [ksoftirqd/1]                0.0  0.0
+     20       2 [kworker/1:0H-events_highpr  0.0  0.0
+     21       2 [cpuhp/2]                    0.0  0.0
+     22       2 [migration/2]                0.0  0.0
+     23       2 [ksoftirqd/2]                0.0  0.0
+     24       2 [kworker/2:0-mm_percpu_wq]   0.0  0.0
+     25       2 [kworker/2:0H-events_highpr  0.0  0.0
+     26       2 [cpuhp/3]                    0.0  0.0
+     27       2 [migration/3]                0.0  0.0
+     28       2 [ksoftirqd/3]                0.0  0.0
+     30       2 [kworker/3:0H-events_highpr  0.0  0.0
+     35       2 [kdevtmpfs]                  0.0  0.0
+     36       2 [netns]                      0.0  0.0
+     37       2 [kauditd]                    0.0  0.0
+     38       2 [khungtaskd]                 0.0  0.0
+     39       2 [oom_reaper]                 0.0  0.0
+     40       2 [writeback]                  0.0  0.0
+     41       2 [kcompactd0]                 0.0  0.0
+     42       2 [ksmd]                       0.0  0.0
+     43       2 [khugepaged]                 0.0  0.0
+     62       2 [kintegrityd]                0.0  0.0
+     63       2 [kblockd]                    0.0  0.0
+     64       2 [blkcg_punt_bio]             0.0  0.0
+     65       2 [edac-poller]                0.0  0.0
+     66       2 [devfreq_wq]                 0.0  0.0
+     67       2 [watchdogd]                  0.0  0.0
+     68       2 [kworker/0:1H-kblockd]       0.0  0.0
+     70       2 [kworker/3:1-events]         0.0  0.0
+     71       2 [kswapd0]                    0.0  0.0
+     72       2 [kthrotld]                   0.0  0.0
+     73       2 [irq/25-aerdrv]              0.0  0.0
+     74       2 [irq/26-aerdrv]              0.0  0.0
+     75       2 [irq/26-pcie-dpc]            0.0  0.0
+     76       2 [irq/27-aerdrv]              0.0  0.0
+     77       2 [irq/27-pcie-dpc]            0.0  0.0
+     78       2 [irq/28-aerdrv]              0.0  0.0
+     79       2 [irq/28-pcie-dpc]            0.0  0.0
+     80       2 [irq/29-aerdrv]              0.0  0.0
+     81       2 [acpi_thermal_pm]            0.0  0.0
+     82       2 [ipv6_addrconf]              0.0  0.0
+     91       2 [kstrp]                      0.0  0.0
+     94       2 [zswap-shrink]               0.0  0.0
+     95       2 [kworker/u9:0]               0.0  0.0
+    118       2 [kworker/3:1H-kblockd]       0.0  0.0
+    147       2 [kworker/2:1H-kblockd]       0.0  0.0
+    149       2 [ata_sff]                    0.0  0.0
+    150       2 [ixgbe]                      0.0  0.0
+    151       2 [scsi_eh_0]                  0.0  0.0
+    152       2 [scsi_tmf_0]                 0.0  0.0
+    153       2 [scsi_eh_1]                  0.0  0.0
+    154       2 [scsi_tmf_1]                 0.0  0.0
+    155       2 [scsi_eh_2]                  0.0  0.0
+    156       2 [scsi_tmf_2]                 0.0  0.0
+    157       2 [scsi_eh_3]                  0.0  0.0
+    158       2 [scsi_tmf_3]                 0.0  0.0
+    159       2 [scsi_eh_4]                  0.0  0.0
+    160       2 [scsi_tmf_4]                 0.0  0.0
+    162       2 [kworker/1:2-events]         0.0  0.0
+    180       2 [nvme-wq]                    0.0  0.0
+    181       2 [nvme-reset-wq]              0.0  0.0
+    182       2 [nvme-delete-wq]             0.0  0.0
+    204       2 [kworker/1:1H-kblockd]       0.0  0.0
+    216       2 [jbd2/sda3-8]                0.0  0.0
+    217       2 [ext4-rsv-conver]            0.0  0.0
+    223       2 [loop0]                      0.0  0.0
+    251       2 [loop1]                      0.0  0.0
+    252       2 [jbd2/loop1-8]               0.0  0.0
+    253       2 [ext4-rsv-conver]            0.0  0.0
+    312       1 /lib/systemd/systemd-journa  0.2  0.0
+    313       1 /lib/systemd/systemd-udevd   0.1  0.0
+    364       1 /usr/sbin/haveged --Foregro  0.1  0.0
+    369       2 [qat_device_rese]            0.0  0.0
+    370       2 [qat_pf2vf_resp_]            0.0  0.0
+    371       2 [adf_vf_stop_wq]             0.0  0.0
+    375       1 /sbin/auditd                 0.0  0.0
+    379     375 /sbin/audisp-tacplus /etc/t  0.0  0.0
+    452       1 /usr/sbin/cron -f            0.0  0.0
+    453       1 /usr/bin/dbus-daemon --syst  0.0  0.0
+    474       1 /usr/sbin/smartd -n          0.1  0.0
+    496       1 /lib/systemd/systemd-logind  0.1  0.0
+    499       1 /usr/bin/containerd          1.7  0.5
+    563       1 /usr/bin/monit -c /etc/moni  0.0  0.0
+    571       1 sshd: /usr/sbin/sshd -D [li  0.1  0.0
+    576       1 /sbin/agetty -o -p -- \u --  0.0  0.0
+    584       1 /usr/bin/dockerd -H unix://  2.9  0.4
+    607       2 [cryptd]                     0.0  0.0
+    775       1 /usr/bin/containerd-shim-ru  0.4  0.0
+    795     775 /usr/bin/python3 /usr/local  0.5  0.0
+    914     795 python3 /usr/bin/supervisor  0.4  0.0
+    915     795 /usr/sbin/rsyslogd -n -iNON  0.0  0.0
+    917     795 /usr/bin/redis-server 127.0  1.3  7.0
+   1002       1 /bin/bash /usr/bin/database  0.1  0.0
+   1006    1002 docker wait database         1.6  0.0
+   1040       1 /usr/bin/python3 /usr/local  0.6  0.0
+   1501       1 /usr/sbin/rsyslogd -n        0.1  0.0
+   1574       1 /usr/bin/containerd-shim-ru  0.4  0.0
+   1645    1574 /usr/bin/python3 /usr/local  0.6  0.0
+   1852       1 /bin/bash /usr/local/bin/bg  0.1  0.0
+   1853    1852 /bin/bash /usr/bin/bgp.sh w  0.1  0.0
+   1854    1853 python3 /usr/local/bin/cont  0.7  0.0
+   2325       1 /usr/bin/python3 /usr/local  0.8  0.1
+   2326       1 python3 /usr/local/bin/belg  0.5  0.5
+   2414       1 /usr/bin/containerd-shim-ru  0.3  0.0
+   2434    2414 /usr/bin/python3 /usr/local  0.6  0.0
+   2454       1 /bin/bash /usr/bin/pmon.sh   0.1  0.0
+   2455    2454 python3 /usr/local/bin/cont  0.7  0.0
+   2488    1645 python3 /usr/bin/supervisor  0.4  0.0
+   2511    1645 /usr/sbin/rsyslogd -n -iNON  0.0  0.0
+   2515    1645 /usr/lib/frr/zebra -A 127.0  1.4  0.0
+   2561       1 /usr/bin/containerd-shim-ru  0.4  0.0
+   2580    2561 /usr/bin/python3 /usr/local  0.6  0.1
+   2588    2434 python3 /usr/bin/supervisor  0.4  0.0
+   2653    1645 /usr/lib/frr/staticd -A 127  0.3  0.0
+   2658    1645 /usr/lib/frr/bgpd -A 127.0.  1.1  0.6
+   2663       1 /bin/bash /usr/local/bin/sw  0.1  0.0
+   2694    1645 /usr/bin/python3 /usr/local  0.6  0.0
+   2695    1645 /usr/bin/python3 /usr/local  0.3  0.0
+   2698    1645 fpmsyncd                     0.1  0.0
+   2719    2434 /usr/sbin/rsyslogd -n -iNON  0.0  0.0
+   2787       1 /usr/bin/containerd-shim-ru  0.3  0.0
+   2803    2580 python3 /usr/bin/supervisor  0.4  0.0
+   2809    2787 /usr/bin/python3 /usr/local  0.6  0.0
+   2836       1 /bin/bash /usr/local/bin/te  0.1  0.0
+   2841    2836 /bin/bash /usr/bin/teamd.sh  0.1  0.0
+   2843       1 /usr/bin/containerd-shim-ru  0.4  0.0
+   2844    2841 python3 /usr/local/bin/cont  0.7  0.0
+   2863    2843 /usr/bin/python3 /usr/local  0.5  0.0
+   2889       1 /bin/bash /usr/local/bin/sy  0.1  0.0
+   2893    2889 /bin/bash /usr/bin/syncd.sh  0.1  0.0
+   2899    2893 python3 /usr/local/bin/cont  0.7  0.0
+   2974       1 /usr/bin/containerd-shim-ru  0.4  0.0
+   3002    2974 /usr/bin/python3 /usr/local  0.6  0.0
+   3015    2434 python3 /usr/local/bin/xcvr  0.6  0.1
+   3018    2434 python3 /usr/local/bin/psud  0.6  2.1
+   3019    2434 python3 /usr/local/bin/syse  0.6  0.0
+   3023       1 /bin/bash /usr/local/bin/ll  0.1  0.0
+   3024    2434 python3 /usr/local/bin/ther  0.6  0.0
+   3025    3023 /bin/bash /usr/bin/lldp.sh   0.1  0.0
+   3026    3025 python3 /usr/local/bin/cont  0.7  0.0
+   3027    2580 /usr/sbin/rsyslogd -n -iNON  0.1  0.0
+   3033    2809 python3 /usr/bin/supervisor  0.4  0.0
+   3045    2863 python3 /usr/bin/supervisor  0.4  0.0
+   3052       1 /usr/bin/containerd-shim-ru  0.4  0.0
+   3073    3052 /usr/bin/python3 /usr/local  0.5  0.0
+   3096       1 /bin/bash /usr/local/bin/ra  0.1  0.0
+   3099    3096 /bin/bash /usr/bin/radv.sh   0.1  0.0
+   3102    3099 python3 /usr/local/bin/cont  0.7  0.0
+   3129    2663 python3 /usr/bin/docker-wai  0.6  0.0
+   3131    2580 /usr/bin/portsyncd           0.1  0.0
+   3157    2863 /usr/sbin/rsyslogd -n -iNON  0.1  0.0
+   3161    2809 /usr/sbin/rsyslogd -n -iNON  0.0  0.0
+   3179    2809 /usr/bin/teammgrd            0.2  0.0
+   3180    2809 /usr/bin/tlm_teamd           0.1  0.0
+   3187    3002 python3 /usr/bin/supervisor  0.4  0.0
+   3189       1 /usr/sbin/ntpd -p /var/run/  0.0  0.0
+   3195    3073 python3 /usr/bin/supervisor  0.4  0.0
+   3197    2580 /usr/bin/orchagent -d /var/  0.5  0.1
+   3202    3024 python3 /usr/local/bin/ther  0.4  0.1
+   3217    2863 /usr/bin/dsserve /usr/bin/s  0.0  0.0
+   3228    3002 /usr/sbin/rsyslogd -n -iNON  0.0  0.0
+   3232    2809 /usr/bin/teamsyncd           0.1  0.0
+   3242    3217 /usr/bin/syncd --diag -u -s 12.4 17.5
+   3245    3073 /usr/sbin/rsyslogd -n -iNON  0.0  0.0
+   3268    2580 /usr/bin/coppmgrd            0.2  0.0
+   3287    3002 lldpd: monitor.              0.1  0.0
+   3289    3287 lldpd: 2 neighbors.          0.1  0.0
+   3295    3018 [sh] <defunct>               0.0  0.0
+   3363    3002 python3 -m lldp_syncd        0.5  0.0
+   3447    2580 /bin/bash /usr/bin/arp_upda  0.0  0.0
+   3448    2580 /usr/bin/neighsyncd          0.1  0.0
+   3450    2580 /usr/bin/fdbmgrd             0.2  0.0
+   3452    2580 /usr/bin/vlanmgrd            0.2  0.0
+   3454    2580 /usr/bin/intfmgrd            0.2  0.0
+   3455    2580 /usr/bin/portmgrd            0.2  0.0
+   3456    2580 /usr/bin/buffermgrd -l /usr  0.2  0.0
+   3462    2580 /usr/bin/vrfmgrd             0.2  0.0
+   3465    2580 /usr/bin/nbrmgrd             0.2  0.0
+   3466    2580 /usr/bin/vxlanmgrd           0.2  0.0
+   3469    2580 /usr/bin/fdbsyncd            0.1  0.0
+   3484    2580 /usr/bin/tunnelmgrd          0.2  0.0
+   3554    3002 python3 /usr/bin/lldpmgrd    0.3  0.0
+   3649    3015 [python3] <defunct>          0.0  0.0
+   4192    2580 /usr/sbin/ndppd              0.0  0.0
+   5168       1 /usr/bin/python3 /usr/local  0.7  0.0
+   6083       1 /usr/bin/containerd-shim-ru  0.4  0.0
+   6106       1 /usr/bin/containerd-shim-ru  0.4  0.0
+   6129    6083 /usr/bin/python3 /usr/local  0.5  0.0
+   6137    6106 /usr/bin/python3 /usr/local  0.5  0.0
+   6159       1 /bin/bash /usr/bin/mgmt-fra  0.1  0.0
+   6160    6159 python3 /usr/local/bin/cont  0.7  0.0
+   6167       1 /bin/bash /usr/bin/telemetr  0.1  0.0
+   6168    6167 python3 /usr/local/bin/cont  0.7  0.0
+   6211       1 /usr/bin/containerd-shim-ru  0.4  0.0
+   6230    6211 /usr/bin/python3 /usr/local  0.6  0.0
+   6245    6137 python3 /usr/bin/supervisor  0.4  0.0
+   6246       1 /bin/bash /usr/bin/snmp.sh   0.1  0.0
+   6249    6246 python3 /usr/local/bin/cont  0.7  0.0
+   6266    6137 /usr/sbin/rsyslogd -n -iNON  0.1  0.0
+   6270    6129 /usr/sbin/rsyslogd -n -iNON  0.0  0.0
+   6274    6129 /usr/sbin/rest_server -ui /  5.5  0.5
+   6277    6230 python3 /usr/bin/supervisor  0.4  0.0
+   6313    6230 /usr/sbin/rsyslogd -n -iNON  0.1  0.0
+   6317    6230 /usr/sbin/snmpd -f -LS0-2d   0.3  0.2
+   6320    6137 /usr/sbin/telemetry -logtos  1.8  0.6
+   6347    6137 /usr/sbin/dialout_client_cl  1.8  0.6
+   6363    6230 python3 -m sonic_ax_impl     0.9  7.9
+  21629       2 [kworker/1:1-events]         0.0  0.0
+  21850       2 [kworker/3:0-mm_percpu_wq]   0.0  0.0
+  22516       2 [kworker/0:1-events]         0.0  0.0
+  23467       2 [kworker/2:1-events]         0.0  0.0
+  23475       1 /sbin/agetty -o -p -- \u 11  0.0  0.0
+  23569       1 /usr/bin/python3 /usr/local  0.6  0.0
+  52309       2 [kworker/u8:0-ext4-rsv-conv  0.0  0.0
+  55593     571 sshd: admin [priv]           0.2  0.0
+  55641   55593 sshd: admin@pts/1            0.1  0.0
+  55642     571 sshd: admin [priv]           0.2  0.0
+  55648   55642 sshd: admin@notty            0.1  0.0
+  55649   55648 /usr/lib/openssh/sftp-serve  0.1  0.0
+  55650   55641 -bash                        0.1  0.0
+  56297       2 [kworker/u8:2-events_unboun  0.0  0.0
+  57193     571 sshd: admin [priv]           0.2  0.0
+  57432   57193 sshd: admin@pts/2            0.1  0.0
+  57438   57432 -bash                        0.1  0.0
+  58069       2 [kworker/0:0-events_power_e  0.0  0.0
+  59649       2 [kworker/u8:1-events_unboun  0.0  0.0
+  60384    3447 sleep 300                    0.0  0.0
+  61368     563 [python3] <defunct>          0.0  1.5
+  61369     563 [python3] <defunct>          0.0  0.2
+  61581    3202 [sh] <defunct>               0.0  0.0
+  61628   55650 /usr/bin/python3 /usr/local  0.9 53.0
+  61647   61628 /bin/sh -c ps -eo pid,ppid,  0.0  0.0
+  61648   61647 ps -eo pid,ppid,cmd,%mem,%c  0.0  0.0
+admin@sonic:~$
+
